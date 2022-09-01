@@ -1,0 +1,21 @@
+class Solution {
+    public double average(int[] salary) {
+        int max=salary[0];
+        int min=salary[0];
+        double s=0;
+        for(int i : salary)
+        {
+            if(max<i)
+            {
+                max=i;
+            }
+            if(min>i)
+            {
+                min=i;
+            }
+            s+=i;
+        }
+        s=(s-max-min)/(salary.length-2);
+        return s;
+    }
+}
